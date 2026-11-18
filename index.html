@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Room Lookup - Employee Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Room Lookup</h1>
+    <p class="subtitle">Enter Employee ID or Mobile Number</p>
+
+    <form id="search-form" autocomplete="off">
+      <input
+        id="query"
+        type="text"
+        inputmode="text"
+        placeholder="e.g. 373707 or 9951956070"
+        aria-label="Employee ID or Mobile Number"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="message" role="alert" aria-live="polite"></div>
+
+    <section id="result" class="card hidden">
+      <div class="room-banner">
+        <div><span class="label">Floor</span><span id="r-floor-big"></span></div>
+        <div><span class="label">Room No</span><span id="r-room-big"></span></div>
+      </div>
+      <dl>
+        <div><dt>Employee Name</dt><dd id="r-name"></dd></div>
+        <div><dt>Work Mandal</dt><dd id="r-mandal"></dd></div>
+        <div><dt>Designation</dt><dd id="r-designation"></dd></div>
+        <div><dt>Working Place Name</dt><dd id="r-place"></dd></div>
+        <div><dt>Floor</dt><dd id="r-floor"></dd></div>
+        <div><dt>Room No</dt><dd id="r-room"></dd></div>
+        <div><dt>Sl. No.</dt><dd id="r-slno"></dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
